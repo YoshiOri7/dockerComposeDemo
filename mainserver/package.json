@@ -1,0 +1,27 @@
+{
+  "name": "dockerDemo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "notes.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dockbuild": "docker build -t server:dev .",
+    "dockrun": "docker run -d --name serverContaier -p 3000:3000 server:dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YoshiOri7/dockerDemo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YoshiOri7/dockerDemo/issues"
+  },
+  "homepage": "https://github.com/YoshiOri7/dockerDemo#readme",
+  "dependencies": {
+    "axios": "^0.15.3",
+    "express": "^4.14.0"
+  }
+}

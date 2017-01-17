@@ -1,0 +1,30 @@
+{
+  "name": "dockerDemo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "notes.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node dbserver.js",
+    "dbinit": "mysql -u root < schema.sql & node db_userGenerator.js",
+    "dockbuild": "docker build -t dbserver:dev .",
+    "dockrun": "docker run -d --name dbserverContainer -p 5000:5000 dbserver:dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YoshiOri7/dockerDemo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YoshiOri7/dockerDemo/issues"
+  },
+  "homepage": "https://github.com/YoshiOri7/dockerDemo#readme",
+  "dependencies": {
+    "bluebird": "^3.4.7",
+    "express": "^4.14.0",
+    "mysql": "^2.12.0",
+    "sequelize": "^3.28.0"
+  }
+}
