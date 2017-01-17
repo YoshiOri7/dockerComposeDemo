@@ -2,8 +2,10 @@ var Sequelize = require('sequelize');
 
 // ==================================================
 // DB config setup
+// var dbHost = 'localhost';
 var dbHost = 'mysql';
 // database = 'dockerDemo1' | username = 'root' | password = ''
+// var db = new Sequelize('dockerDemo', 'root', '', {
 var db = new Sequelize('dockerDemo', 'root', 'dockerDemo', {
   host: dbHost,
   dialetc: 'mysql'

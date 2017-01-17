@@ -1,6 +1,6 @@
-var axios = require('axios')
-var express = require('express')
-var app = express()
+var axios = require('axios');
+var express = require('express');
+var app = express();
 
 app.get('/', function (req, res) {
   res.send('Hello World!!!')
@@ -12,10 +12,10 @@ app.get('/users', function (req, res) {
 
   axios.get(dbHost)
     .then(function (response) {
-      res.json(response.data)
+      res.json(response.data);
     })
     .catch(function (error) {
-      res.json(error)
+      res.json(error);
     });
 })
 

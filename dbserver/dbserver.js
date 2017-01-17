@@ -1,10 +1,10 @@
-var express = require('express')
+var express = require('express');
 var User = require('./db.js').User;
 
 // generate fake userData
 require('./db_userGenerator.js').User;
 
-var app = express()
+var app = express();
 
 app.get('/', function (req, res) {
   User.findAll({raw: true})
