@@ -38,21 +38,24 @@ docker info
 sudo yum install -y git
 
 // Clone down repo from GitHub
-git clone https://github.com/YoshiOri7/dockerDemo.git
+git clone https://github.com/YoshiOri7/dockerComposeDemo.git
 
 // cd into the app folder
-cd dockerDemo
+cd dockerComposeDemo
 
-// create docker image and docker container
-docker build -t server:dev .
-docker run -d --name serverContaier -p 3000:3000 server:dev
-
-
-
+// run docker-compose.yml to build containers
+// http://www.mattkimber.co.uk/setting-up-docker-and-docker-compose-on-aws/
+// https://gist.github.com/hitsujiwool/81fcab49f9ccf8ac5835
+docker-compose up
 
 
+// store/share compositions
+// http://stackoverflow.com/questions/29826057/using-docker-compose-how-do-i-share-my-image-to-docker-hub
+
+ecs-cli compose --file docker-compose.yml service up
 
 
+ curl -L "https://github.com/docker/compose/releases/download/1.9.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 
 
 

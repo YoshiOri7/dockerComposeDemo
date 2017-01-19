@@ -21,6 +21,8 @@ docker rm  <CONTAINER ID> // to remove docker container
 docker stop <CONTAINER ID> // stops the container
 docker start <CONTAINER ID> // strats the container
 
+docker-machine ip machine-name //get IP address
+
 // ==========================================
 
 // build an image ----------------------
